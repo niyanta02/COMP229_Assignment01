@@ -1,0 +1,20 @@
+{
+  "name": "comp229_assignment01",
+  "version": "1.0.0",
+  "description": "COMP229 assignment01 personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Week02",
+    "COMP229",
+    "Assignment01",
+    "Section003"
+  ],
+  "author": "Niyanta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
