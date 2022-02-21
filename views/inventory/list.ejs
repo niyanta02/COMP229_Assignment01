@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+
+   <!-- Main Content -->
+   <main class="container">
+    <div class="row">
+        <h1>Bussiness Contact List</h1>
+        <br>
+        <div>
+            <a href="/inventory/add" class="btn btn-primary align-self-end" role="button">
+                <i class="fas fa-plus-circle"></i> 
+                Add a new Item
+            </a>                
+        </div>
+
+        <br><br>
+        <table class = "table table-bordered table-striped table-hover">
+            <tr>
+                <th class="text center">Name</th>
+                <th class="text center">Number</th>
+                <th class="text center">Email</th>
+            </tr>
+
+            <% for(let count = 0; count < InventoryList.length; count++){ %>
+                <tr>
+                    <td class="text center"><%= InventoryList[count].name %></td>
+                    <td class="text center"><%= InventoryList[count].number %></td>
+                    <td class="text center"><%= InventoryList[count].email %></td>
+                
+                        <td class="text center">
+                            <a href="/inventory/edit/<%= InventoryList[count]._id %>" class="btn btn-primary">
+                            <i class="fas fa-pencil-alt"></i> Update</a>
+                        </td>
+                        <td class="text center">
+                            <a href="/inventory/delete/<%= InventoryList[count]._id %>" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                </tr>
+           <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+
+  <% include ../partials/footer.ejs %>

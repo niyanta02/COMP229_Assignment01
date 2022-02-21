@@ -25,6 +25,10 @@ router.get('/service', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact Page' });
 });
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Login Page' });
+});
+
 
 
 module.exports = router;
